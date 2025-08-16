@@ -1,5 +1,5 @@
 import streamlit as st
-#from PyPDF2 import PdfReader
+from PyPDF2 import PdfReader
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -54,3 +54,4 @@ if uploaded_files and job_description:
     
 
     st.write(results)
+
