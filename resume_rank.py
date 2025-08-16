@@ -1,5 +1,5 @@
 import streamlit as st
-from PyPDF2 import PdfReader
+#from PyPDF2 import PdfReader
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -52,4 +52,5 @@ if uploaded_files and job_description:
     results = pd.DataFrame({"Resume": [file.name for file in uploaded_files], "Score": scores })
     results = results.sort_values(by="Score", ascending=False)
     
+
     st.write(results)
